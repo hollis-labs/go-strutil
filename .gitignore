@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Go build artifacts
+*.exe
+*.test
+*.out
+coverage.out
+coverage.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Local bootstrap prompt (not part of the module)
+BOOT.md
