@@ -15,3 +15,11 @@ coverage.html
 
 # Local bootstrap prompt (not part of the module)
 BOOT.md
+
+# Agent-tooling artifacts — must never appear in a public repo
+.agentrc/
+agentrc.yaml
+agentrc.yml
+.claude/
+CLAUDE.md
+AGENTS.md

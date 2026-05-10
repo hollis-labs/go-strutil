@@ -1,6 +1,3 @@
-// Package strutil provides a small collection of string manipulation helpers
-// modeled on Laravel's Illuminate\Support\Str facade, but idiomatic Go.
-// All functions are pure, rune-safe, and handle empty inputs gracefully.
 package strutil
 
 import (
