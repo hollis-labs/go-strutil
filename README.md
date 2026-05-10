@@ -2,7 +2,9 @@
 
 A small, focused collection of string manipulation helpers for Go, modeled loosely on Laravel's `Illuminate\Support\Str` facade but translated to idiomatic, rune-safe Go. All functions are top-level, pure, and handle empty input gracefully. The only non-stdlib dependency is `golang.org/x/text` for Unicode normalization inside `Slugify`.
 
-> **Status:** early internal module. Until a tagged release, consumers should pin via a `replace` directive in their own `go.mod`.
+> **Status:** pre-1.0 (`v0.1.x`). API surface is stable enough for production use but may evolve in minor versions. Breaking changes will be called out loudly in [CHANGELOG.md](CHANGELOG.md).
+
+API reference: <https://pkg.go.dev/github.com/hollis-labs/go-strutil>
 
 ## Installation
 
@@ -10,20 +12,13 @@ A small, focused collection of string manipulation helpers for Go, modeled loose
 go get github.com/hollis-labs/go-strutil
 ```
 
-For local development against an uncommitted checkout:
-
-```go
-// go.mod
-require github.com/hollis-labs/go-strutil v0.0.0
-
-replace github.com/hollis-labs/go-strutil => ../../path/to/go-strutil
-```
-
 ```go
 import "github.com/hollis-labs/go-strutil"
 
 slug := strutil.Slugify("Café du Monde") // "cafe-du-monde"
 ```
+
+See [`examples/`](examples/) for runnable demonstrations of each function group.
 
 ## Function reference
 
@@ -112,3 +107,7 @@ The following Laravel `Str` helpers were intentionally deferred and may land in 
 - `Ulid` / `Uuid` — belong in their own module.
 - `Is` (glob-style match).
 - Fluent `Stringable` wrapper — not idiomatic Go.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
