@@ -1,5 +1,22 @@
 # go-strutil
 
+## Maintenance moved to `github.com/hollis-labs/libs/util`
+
+This standalone repository is retired. Maintained source and documentation are
+in [github.com/hollis-labs/libs/util/strutil](https://github.com/hollis-labs/libs/tree/util%2Fv0.1.0/util/strutil), released in **`util/v0.1.0`**.
+Install the replacement module:
+
+```sh
+go get github.com/hollis-labs/libs/util@v0.1.0
+```
+
+Replace the `github.com/hollis-labs/go-strutil` import prefix with
+`github.com/hollis-labs/libs/util/strutil`, retaining the package subpath. Review the replacement documentation
+for any API changes before migrating. Existing standalone tags and history remain
+available; old module pins do not automatically redirect to the new module.
+
+The documentation below describes historical standalone usage.
+
 A small, focused collection of string manipulation helpers for Go, modeled loosely on Laravel's `Illuminate\Support\Str` facade but translated to idiomatic, rune-safe Go. All functions are top-level, pure, and handle empty input gracefully. The only non-stdlib dependency is `golang.org/x/text` for Unicode normalization inside `Slugify`.
 
 > **Status:** pre-1.0 (`v0.1.x`). API surface is stable enough for production use but may evolve in minor versions. Breaking changes will be called out loudly in [CHANGELOG.md](CHANGELOG.md).
